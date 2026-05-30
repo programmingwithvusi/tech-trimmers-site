@@ -9,7 +9,7 @@ export default function Home() {
         <h2 className="subtitle">Gardening made easy</h2>
 
         <div className="details">
-          <p>Unisa – Business Informatics</p>
+          <p>Unisa – ICT3642 Business Informatics</p>
           <p>
             Name: <span className="highlight">Levious Vusi Dhlamini</span>
           </p>
