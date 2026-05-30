@@ -1,5 +1,5 @@
 export default function Home() {
-  const siteUrl = 'https://tech-trimmers.netlify.app'; // replace with your live URL
+  const siteUrl = 'ech-trimmers-site.netlify.app'; // replace with your live URL
   const accessedDate = new Date().toLocaleDateString();
   return (
     <div className="page-container">
