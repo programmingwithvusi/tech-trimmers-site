@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         <a href="/TechTrimmers.pdf" download className="download-btn">
-          📥 Download PDF Document
+          📥 Download PDF Citation Document
         </a>
 
         <footer className="footer">
