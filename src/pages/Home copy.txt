@@ -1,0 +1,54 @@
+export default function Home() {
+  const siteUrl = 'https://tech-trimmers.netlify.app'; // replace with your live URL
+  const accessedDate = new Date().toLocaleDateString();
+  return (
+    <div
+      className="min-h-screen bg-cover bg-center flex items-center justify-center"
+      style={{
+        backgroundImage: 'url(/garden-bg.png)',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="bg-white/90 shadow-2xl rounded-xl p-12 max-w-3xl text-center backdrop-blur-md border border-green-200">
+        <h1 className="text-6xl font-extrabold text-green-800 tracking-wide mb-6 animate-pulse">
+          Tech Trimmers
+        </h1>
+        <h2 className="text-2xl italic text-gray-700 mb-8">
+          Gardening made easy
+        </h2>
+
+        <div className="space-y-3 text-lg text-gray-900">
+          <p className="font-medium">Unisa – Business Informatics</p>
+          <p>
+            Name: <span className="font-semibold">Levious Vusi Dhlamini</span>
+          </p>
+          <p>
+            Student Number: <span className="font-semibold">36831263</span>
+          </p>
+        </div>
+
+        <a
+          href="/TechTrimmers.pdf"
+          download
+          className="inline-block mt-10 bg-green-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-green-700 hover:scale-105 transition-transform duration-300"
+        >
+          📥 Download Word Document
+        </a>
+
+        <footer className="mt-12 text-sm text-gray-600 border-t border-gray-300 pt-4">
+          <p>© {new Date().getFullYear()} Tech Trimmers</p>
+          <p className="mt-2 italic">
+            View Online Citation:{' '}
+            <a
+              href={siteUrl}
+              className="text-green-700 underline hover:text-green-900"
+            >
+              {siteUrl}
+            </a>
+          </p>
+          <p>Accessed on {accessedDate}</p>
+        </footer>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,362 @@
+/* Enable smooth scrolling globally */
+html {
+  scroll-behavior: smooth;
+}
+/* Background */
+.page-container {
+  min-height: 100vh;
+  background: url('/garden-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* ensures spacing on mobile */
+}
+
+/* Sticky header */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(46, 125, 50, 0.95); /* green with slight transparency */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Content box */
+.content-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  width: 100%; /* allow shrinking */
+  text-align: center;
+  border: 2px solid #a7d7a7;
+}
+
+/* Typography */
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.details {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Button */
+.download-btn {
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+}
+
+.footer a {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #1b5e20;
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .details {
+    font-size: 1rem;
+  }
+
+  .download-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .details {
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    width: 100%; /* full-width button on small screens */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to content box */
+.content-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #a7d7a7;
+  margin-top: 2rem;
+
+  /* Animation */
+  opacity: 0; /* start hidden */
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Apply animation to content box */
+.content-box {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #a7d7a7;
+  margin-top: 2rem;
+
+  /* Animation */
+  opacity: 0; /* start hidden */
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Header fade-in + slide-down */
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(46, 125, 50, 0.95);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  /* Animation */
+  opacity: 0;
+  animation: headerFadeIn 1s ease-out forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Services list */
+.services-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.services-list li {
+  margin: 0.8rem 0;
+  padding: 0.6rem;
+  background: rgba(46, 125, 50, 0.1);
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.services-list li:hover {
+  background: rgba(46, 125, 50, 0.2);
+}
+
+/* Slide bar navigation */
+.slide-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(46, 125, 50, 0.95);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Page content shifts right to make space for sidebar */
+.page-content {
+  margin-left: 220px;
+  padding: 2rem;
+}
+
+/* Responsive: slide bar becomes top bar on mobile */
+@media (max-width: 768px) {
+  .slide-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .page-content {
+    margin-left: 0;
+    margin-top: 80px; /* push content below top bar */
+  }
+}
