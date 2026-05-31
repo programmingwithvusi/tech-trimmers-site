@@ -84,6 +84,35 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Button group */
+.button-group {
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 1.5rem; /* space between buttons */
+  align-items: center; /* center them horizontally */
+}
+
+.download-btn,
+.citation-btn {
+  display: inline-block;
+  background: #2e7d32;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 80%; /* make them uniform width */
+  text-align: center;
+}
+
+.download-btn:hover,
+.citation-btn:hover {
+  background: #1b5e20;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Footer */
 .footer {
   margin-top: 2rem;
@@ -358,5 +387,99 @@ html {
   .page-content {
     margin-left: 0;
     margin-top: 80px; /* push content below top bar */
+  }
+}
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-250px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Sidebar navigation */
+.slide-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 220px;
+  background: rgba(46, 125, 50, 0.95);
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+
+  /* Animation */
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Navigation links */
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  padding: 0.6rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Page content shifts right */
+.page-content {
+  margin-left: 220px;
+  padding: 2rem;
+}
+
+/* Responsive: sidebar becomes top bar */
+@media (max-width: 768px) {
+  .slide-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    animation: slideIn 0.8s ease-out forwards;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .page-content {
+    margin-left: 0;
+    margin-top: 80px;
   }
 }

@@ -7,7 +7,6 @@ export default function Home() {
 
       <div className="content-box">
         <h2 className="subtitle">Gardening made easy</h2>
-
         <div className="details">
           <p>Unisa – ICT3642 Business Informatics</p>
           <p>
@@ -17,11 +16,19 @@ export default function Home() {
             Student Number: <span className="highlight">36831263</span>
           </p>
         </div>
-
-        <a href="/TechTrimmers.pdf" download className="download-btn">
-          📥 Download PDF Citation Document
-        </a>
-
+        <div className="button-group">
+          <a href="/TechTrimmers.pdf" download className="download-btn">
+            📥 Download PDF Citation Document
+          </a>
+          <></>
+          <a
+            href="/ViewMarkedAssignment.pdf"
+            download
+            className="download-btn citation-btn"
+          >
+            📥 Download PDF Feedback Document
+          </a>
+        </div>
         <footer className="footer">
           <p>© {new Date().getFullYear()} Tech Trimmers</p>
           <p className="citation">
