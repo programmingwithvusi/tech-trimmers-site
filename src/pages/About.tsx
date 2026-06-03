@@ -1,5 +1,4 @@
 import '../App.css';
-
 export default function About() {
   return (
     <div className="page-container">
@@ -15,6 +14,16 @@ export default function About() {
         <p className="details">
           Student Number: <span className="highlight">36831263</span>
         </p>
+
+        {/* Mission statement */}
+        <div className="highlight-box">
+          <h2 className="subtitle">Our Mission</h2>
+          <p>
+            To empower gardeners with technology-driven tools that simplify
+            planning, irrigation, and maintenance — making gardening accessible
+            and sustainable for everyone.
+          </p>
+        </div>
       </div>
     </div>
   );
